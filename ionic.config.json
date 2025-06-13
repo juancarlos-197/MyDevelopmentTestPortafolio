@@ -1,0 +1,7 @@
+{
+  "name": "MyDevelopmentTestPortafolio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
