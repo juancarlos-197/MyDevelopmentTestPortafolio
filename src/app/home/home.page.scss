@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -25,9 +24,15 @@
 #container a {
   text-decoration: none;
 }
-.title{
-    color: white;
-}
-.option-label{
+
+.title {
   color: white;
+}
+
+.option-label {
+  color: white;
+}
+
+ion-item-sliding {
+  border-bottom: 1px solid rgb(0, 0, 0, 0.13);
 }

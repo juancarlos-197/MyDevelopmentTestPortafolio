@@ -14,19 +14,19 @@
     </ion-fab-button>
   </ion-fab>
   <ion-list>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let post of posts">
 
-      <ion-item>
+      <ion-item lines="none">
         <ion-label>
-          <h1>Titulo</h1>
-          <p>Detalles</p>
+          <h1>{{post.title}}</h1>
+          <p>{{post.details}}</p>
           Sliding Item with Expandable Options
         </ion-label>
       </ion-item>
 
 
       <ion-item-options side="start">
-        <ion-item-option color="success" class="option-label" expandable>Archive
+        <ion-item-option color="success" class="option-label"(click)="deletePost(post.id)" expandable>Archive
         <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
         </ion-item-option>
       </ion-item-options>

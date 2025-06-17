@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RegistarPageRoutingModule } from './registar-routing.module';
+import { EditPagePageRoutingModule } from './edit-page-routing.module';
 
-import { RegistarPage } from './registar.page';
+import { EditPagePage } from './edit-page.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RegistarPageRoutingModule
+    EditPagePageRoutingModule
   ],
-  declarations: [RegistarPage]
+  declarations: [EditPagePage]
 })
-export class RegistarPageModule {}
+export class EditPagePageModule {}

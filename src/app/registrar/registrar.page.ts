@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-
 import { User } from '../models/user.mdel';
 import { LoadingController, NavController, ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-registar',
+  templateUrl: './registrar.page.html',
+  styleUrls: ['./registrar.page.scss'],
   standalone: false,
 
 })
-export class LoginPage implements OnInit {
- user = {} as User
+export class RegistrarPage implements OnInit {
+  user = {} as User
   constructor(
     private toasCtrl: ToastController,
     private loadingCtrl: LoadingController,
@@ -20,22 +19,22 @@ export class LoginPage implements OnInit {
     private navCtrl: NavController
   ) { }
 
-  ngOnInit() {
-  }
-async login(user: User) {
+  ngOnInit() { }
+  async registro(user: User) {
     if (!this.formValidation()) {
+      console.log('data', user)
       let loader = await this.loadingCtrl.create({
-        message: "Espere un pomento por favor... "
+        message: "Espere por favor... "
       })
       await loader.present()
       try {
-        await this.afAutf.signInWithEmailAndPassword(user.email, user.password).then(data => {
+        await this.afAutf.createUserWithEmailAndPassword(user.email, user.password).then(data => {
             console.log('"Espere por favor... "', data)
             this.navCtrl.navigateRoot("home")
           }
         )
       } catch (e: any) {
-        e.message = "Usuario no registrado";
+        e.message = "Error al registrarse";
         let errorMessage = e.message || e.getLocalizedMessage();
         this.showToast(errorMessage)
       }
@@ -61,5 +60,3 @@ async login(user: User) {
     }).then(toasData => toasData.present());
   }
 }
-
-
