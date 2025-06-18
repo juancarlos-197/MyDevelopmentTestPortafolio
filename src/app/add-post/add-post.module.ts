@@ -15,6 +15,6 @@ import { AddPostPage } from './add-post.page';
     IonicModule,
     AddPostPageRoutingModule
   ],
-  declarations: [AddPostPage]
+  declarations: []
 })
 export class AddPostPageModule {}

@@ -26,8 +26,7 @@ const routes: Routes = [
   {
     path: 'edit-page',
     loadChildren: () => import('./edit-page/edit-page.module').then( m => m.EditPagePageModule)
-  },
-  
+  }
 ];
 
 @NgModule({

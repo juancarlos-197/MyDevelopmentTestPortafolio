@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>editPage</ion-title>
+    <ion-title>Editar</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,4 +10,19 @@
       <ion-title size="large">editPage</ion-title>
     </ion-toolbar>
   </ion-header>
+<ion-content [fullscreen]="true">
+
+<ion-item>
+    <ion-label position="floating">Titulo</ion-label>
+    <ion-input type="text"[(ngModel)]="post.title" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> Descripción</ion-label>
+    <ion-input type="text"[(ngModel)]="post.details" required></ion-input>
+  </ion-item>
+
+  <ion-button class="ion-padding"  class="buton-negro"color="primary" (click)="updatePost(post)" >Actualizar</ion-button>
+
+
+
 </ion-content>

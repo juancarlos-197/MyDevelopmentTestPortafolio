@@ -15,6 +15,6 @@ import { EditPagePage } from './edit-page.page';
     IonicModule,
     EditPagePageRoutingModule
   ],
-  declarations: [EditPagePage]
+  declarations: []
 })
 export class EditPagePageModule {}

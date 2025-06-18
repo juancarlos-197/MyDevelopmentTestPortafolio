@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>addPost</ion-title>
+    <ion-title>Agregar</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,4 +10,16 @@
       <ion-title size="large">addPost</ion-title>
     </ion-toolbar>
   </ion-header>
+<ion-item>
+    <ion-label position="floating">Titulo</ion-label>
+    <ion-input type="text"[(ngModel)]="post.title" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> Descripción</ion-label>
+    <ion-input type="text"[(ngModel)]="post.details" required></ion-input>
+  </ion-item>
+
+  <ion-button class="ion-padding"  class="buton-negro"color="primary" (click)="createPost(post)" >Crear</ion-button>
+
+
 </ion-content>
